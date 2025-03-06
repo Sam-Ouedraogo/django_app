@@ -7,7 +7,12 @@
 {%block content %}
 
   <section>
-    This is the section 
+    <h2>This is the section </h2>
+    <form class="form-width-validation" action="/users/register/" method="post">
+        {%csrf_token%}
+        {{form}}
+        <button>Submit</button>
+    </form>
   </section>
 
 {% endblock %} 

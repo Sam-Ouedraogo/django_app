@@ -11,7 +11,12 @@
     <form class="form-width-validation" action="/users/login/" method="post">
         {%csrf_token%}
         {{form}}
+
+        {% if request.GET.next %}
+        <input type = 'hidden' nem = 'next' value = "{{request.GET.next}}"/>
+        {%endif%}
         <button>Submit</button>
+
     </form>
   </section>
 
